@@ -1,11 +1,14 @@
 :root {
+  --primary: rgb(33, 133, 163);
+  --w: rgb(235, 235, 235);
+  --b: rgb(27, 27, 27);
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Athene;
+  font-family: Urbanist;
 }
 
 @font-face {
@@ -16,4 +19,32 @@
 @font-face {
   font-family: Urbanist;
   src: url("../assets/fonts/Urbanist.otf");
+}
+
+#cursor {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border: 0.5px solid white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: ease;
+  z-index: 999999;
+  pointer-events: none;
+}
+#cursor.highlight {
+  transform: scale(3);
+  transition: ease;
+  border-style: dashed;
+  animation: rotating 10s infinite;
+}
+@keyframes rotating {
+  0% {
+    transform: scale(3) rotate(0deg);
+  }
+  100% {
+    transform: scale(3) rotate(360deg);
+  }
 }
