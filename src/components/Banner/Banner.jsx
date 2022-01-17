@@ -20,6 +20,14 @@ const Banner = () => {
       >
         Mart Anthony
       </h1>
+      <h1
+        onMouseEnter={() => handleCursor("enter")}
+        onMouseLeave={() => handleCursor("leave")}
+        className="name parallax-layer"
+        data-speed="4"
+      >
+        Salazar
+      </h1>
     </div>
   );
 };
