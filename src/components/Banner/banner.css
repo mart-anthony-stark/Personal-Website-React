@@ -1,0 +1,14 @@
+.container {
+  min-height: 100vh;
+  background: var(--primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.name {
+  font-size: 85px;
+  color: white;
+}
+.name:hover ~ #cursor {
+  transform: scale(5);
+}
