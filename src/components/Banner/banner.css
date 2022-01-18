@@ -1,10 +1,11 @@
 .container {
   min-height: 100vh;
-  background: var(--primary);
+  background: var(--color-primary);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  overflow: hidden;
 }
 .name {
   font-size: 85px;
