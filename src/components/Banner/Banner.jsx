@@ -11,7 +11,7 @@ const Banner = () => {
   };
 
   return (
-    <div className="container">
+    <div className="home">
       <h1
         onMouseEnter={() => handleCursor("enter")}
         onMouseLeave={() => handleCursor("leave")}
