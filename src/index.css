@@ -70,10 +70,11 @@
   transition: ease;
   border-style: dashed;
   animation: rotating 10s infinite;
+  transform: translate(-50%, -50%);
 }
 
 #cursor.snap {
-  animation: snap 1s;
+  animation: snap 0.2s;
 }
 @keyframes rotating {
   0% {
@@ -96,7 +97,7 @@
     transform: translate(-50%, -50%) scale(1);
   }
   50% {
-    transform: translate(-50%, -50%) scale(1.2);
+    transform: translate(-50%, -50%) scale(2);
   }
   100% {
     transform: translate(-50%, -50%) scale(0.3);
