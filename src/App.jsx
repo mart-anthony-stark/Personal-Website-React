@@ -4,8 +4,8 @@ import Home from "./pages/Home";
 
 function App() {
   useEffect(() => {
+    const cursor = document.querySelector("#cursor");
     function followCursor(e) {
-      const cursor = document.querySelector("#cursor");
       cursor.style.top = e.clientY + "px";
       cursor.style.left = e.clientX + "px";
     }
@@ -18,12 +18,23 @@ function App() {
         layer.style.transform = `translate(${x}px,${y}px)`;
       });
     }
+
+    function snap() {
+      cursor.classList.add("snap");
+
+      setTimeout(() => {
+        cursor.classList.remove("snap");
+      }, 500);
+    }
+
     window.addEventListener("mousemove", followCursor);
     window.addEventListener("mousemove", parallax);
+    window.addEventListener("click", snap);
 
     return () => {
       window.removeEventListener("mousemove", followCursor);
       window.removeEventListener("mousemove", parallax);
+      window.removeEventListener("click", snap);
     };
   }, []);
 
