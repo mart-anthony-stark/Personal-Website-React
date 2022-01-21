@@ -3,7 +3,7 @@
   width: 200px;
   height: 200px;
   transform-style: preserve-3d;
-  animation: rotate 30s linear infinite;
+  animation: rotate 50s linear infinite;
 }
 .slider span {
   position: absolute;
@@ -23,6 +23,10 @@
   border-radius: 20px;
   object-fit: cover;
   transform: rotateY(calc(var(--i) * 45deg)) translateZ(300px);
+}
+.slider span:hover {
+  transition: 0.5s ease;
+  transform: scale(1.1);
 }
 @keyframes rotate {
   0% {
