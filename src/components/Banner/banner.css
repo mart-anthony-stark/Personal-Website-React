@@ -1,10 +1,5 @@
 .home {
   min-height: 100vh;
-  /* background: linear-gradient(
-    to top,
-    var(--color-primary),
-    var(--color-secondary-shade) 100%
-  ); */
   background: var(--color-primary);
   display: flex;
   justify-content: center;

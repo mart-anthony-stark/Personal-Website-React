@@ -103,3 +103,12 @@
     transform: translate(-50%, -50%) scale(0.3);
   }
 }
+section {
+  min-height: 100vh;
+  background: var(--color-primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+}
