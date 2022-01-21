@@ -1,7 +1,7 @@
 import { useRef, useEffect } from "react";
 import "./App.css";
 import Home from "./pages/Home";
-import Works from "./pages/Works";
+import Works from "./pages/works/Works";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
