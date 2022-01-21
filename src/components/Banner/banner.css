@@ -20,3 +20,22 @@
 .name:hover ~ #cursor {
   transform: scale(5);
 }
+.links {
+  display: flex;
+  gap: 50px;
+}
+.links button {
+  padding: 10px 20px;
+  border: 2px solid var(--color-secondary-shade);
+  cursor: pointer;
+  border-radius: 5px;
+  background: none;
+  color: var(--color-secondary-shade);
+  font-size: 20px;
+}
+.links button:hover {
+  color: var(--color-primary-contrast);
+  border: 2px solid var(--color-primary-contrast);
+  transform: scale(1.2);
+  transition: 0.5s ease-in-out;
+}
