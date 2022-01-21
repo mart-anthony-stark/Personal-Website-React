@@ -1,6 +1,7 @@
 import { useRef, useEffect } from "react";
 import "./App.css";
 import Home from "./pages/Home";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   useEffect(() => {
@@ -41,7 +42,11 @@ function App() {
   return (
     <div>
       <div id="cursor"></div>
-      <Home />
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </Router>
     </div>
   );
 }
