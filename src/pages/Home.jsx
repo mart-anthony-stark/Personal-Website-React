@@ -21,7 +21,7 @@ const Home = () => {
             initial={{ y: -100, x: 300, opacity: 0 }}
             animate={{ y: 0, x: 0, opacity: 1 }}
             exit={{ y: -100, opacity: 0 }}
-            transition={{ duration: 2, easings: "linear" }}
+            transition={{ duration: 1, easings: "linear" }}
             id="moon"
             data-speed="4"
             src={moon}
