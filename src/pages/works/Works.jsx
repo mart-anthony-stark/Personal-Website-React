@@ -8,13 +8,19 @@ import p6 from "../../images/projects/weather.png";
 import p7 from "../../images/projects/News.png";
 import p8 from "../../images/projects/jaja.png";
 import "./works.css";
+import { AnimatePresence, motion } from "framer-motion";
 
 const Home = () => {
   return (
     <div>
       <Navbar />
       <section>
-        <div className="slider">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, easings: "circOut" }}
+          className="slider"
+        >
           <span style={{ "--i": 1 }}>
             <img src={p1} />
           </span>
@@ -39,7 +45,7 @@ const Home = () => {
           <span style={{ "--i": 8 }}>
             <img src={p8} />
           </span>
-        </div>
+        </motion.div>
       </section>
     </div>
   );
