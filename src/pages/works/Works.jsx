@@ -16,35 +16,36 @@ const Home = () => {
       <Navbar />
       <section>
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, easings: "circOut" }}
-          className="slider"
+          initial={{ scaleX: 0, opacity: 0 }}
+          animate={{ scaleX: 1, opacity: 1 }}
+          transition={{ duration: 1, delay: 1 }}
         >
-          <span style={{ "--i": 1 }}>
-            <img src={p1} />
-          </span>
-          <span style={{ "--i": 2 }}>
-            <img src={p2} />
-          </span>
-          <span style={{ "--i": 3 }}>
-            <img src={p3} />
-          </span>
-          <span style={{ "--i": 4 }}>
-            <img src={p4} />
-          </span>
-          <span style={{ "--i": 5 }}>
-            <img src={p5} />
-          </span>
-          <span style={{ "--i": 6 }}>
-            <img src={p6} />
-          </span>
-          <span style={{ "--i": 7 }}>
-            <img src={p7} />
-          </span>
-          <span style={{ "--i": 8 }}>
-            <img src={p8} />
-          </span>
+          <div className="slider">
+            <span style={{ "--i": 1 }}>
+              <img src={p1} />
+            </span>
+            <span style={{ "--i": 2 }}>
+              <img src={p2} />
+            </span>
+            <span style={{ "--i": 3 }}>
+              <img src={p3} />
+            </span>
+            <span style={{ "--i": 4 }}>
+              <img src={p4} />
+            </span>
+            <span style={{ "--i": 5 }}>
+              <img src={p5} />
+            </span>
+            <span style={{ "--i": 6 }}>
+              <img src={p6} />
+            </span>
+            <span style={{ "--i": 7 }}>
+              <img src={p7} />
+            </span>
+            <span style={{ "--i": 8 }}>
+              <img src={p8} />
+            </span>
+          </div>
         </motion.div>
       </section>
     </div>
