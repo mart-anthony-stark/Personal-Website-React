@@ -1,8 +1,16 @@
 import "./banner.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 
-const Banner = () => {
+const Banner = ({ show, setShow }) => {
+  const navigate = useNavigate();
+
+  const handleNavigate = (link) => {
+    setShow(false);
+    setTimeout(() => {
+      navigate(link);
+    }, 2000);
+  };
   return (
     <div className="home">
       <motion.h1
@@ -36,15 +44,9 @@ const Banner = () => {
         data-speed="7"
         className="links"
       >
-        <Link to="/works">
-          <button>Works</button>
-        </Link>
-        <Link to="/about">
-          <button>About</button>
-        </Link>
-        <Link to="/contact">
-          <button>Contact</button>
-        </Link>
+        <button onClick={() => handleNavigate("/works")}>Works</button>
+        <button>About</button>
+        <button>Contact</button>
       </motion.div>
     </div>
   );
