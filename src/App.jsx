@@ -3,6 +3,7 @@ import "./App.css";
 import Home from "./pages/Home";
 import Works from "./pages/works/Works";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
 
 function App() {
   useEffect(() => {
@@ -43,12 +44,14 @@ function App() {
   return (
     <div>
       <div id="cursor"></div>
-      <Router>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/works" element={<Works />} />
-        </Routes>
-      </Router>
+      <AnimatePresence>
+        <Router>
+          <Routes key={location.pathname}>
+            <Route path="/" element={<Home />} />
+            <Route path="/works" element={<Works />} />
+          </Routes>
+        </Router>
+      </AnimatePresence>
     </div>
   );
 }
