@@ -15,10 +15,11 @@ const Home = () => {
     <div>
       <Navbar />
       <section>
+        <h1 id="title">My Works</h1>
         <motion.div
           initial={{ scaleX: 0, opacity: 0 }}
           animate={{ scaleX: 1, opacity: 1 }}
-          transition={{ duration: 1, delay: 1 }}
+          transition={{ duration: 1, delay: 0 }}
         >
           <div className="slider">
             <span style={{ "--i": 1 }}>
@@ -48,6 +49,7 @@ const Home = () => {
           </div>
         </motion.div>
       </section>
+      <section></section>
     </div>
   );
 };
